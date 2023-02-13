@@ -11,13 +11,13 @@ function download_data_promise(company_name)
     const file = fs.createWriteStream('./data/H1B_employers_approval_2022/'+ company_name + '.csv');
     return new Promise(() => {
         request(URL)
-        .pipe(file)
-        .on('finish', () => {
-            console.log("downloaded!");
-        })
-        .on('error', () => {
-            console.log("url is incorrect");
-        })
+            .pipe(file)
+            .on('finish', () => {
+                console.log("downloaded!");
+            })
+            .on('error', () => {
+                console.log("url is incorrect");
+            })
     })
 }
 
@@ -32,7 +32,5 @@ async function download_data(company_name)
         console.log(error);
     }
 }
-
-download_data('amazon');
 
 module.exports = {download_data};
