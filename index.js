@@ -5,18 +5,9 @@ const fs = require('fs');
 const company_name = "amazon";
 const url = "https://www.uscis.gov/tools/reports-and-studies/h-1b-employer-data-hub/export?topic_id=" + company_name + "&state=All&fy=1&naics=All&items_per_page=10";
 
-const file = fs.createWriteStream('./data/H1B_employers_approval_2022/'+ company_name+ '.csv');
+const file = fs.createWriteStream('./data/H1B_employers_approval_2022/'+ company_name + '.csv');
 
 const data = [];
-
-request(url)
-    .pipe(file)
-    .on('finish', () => {
-        console.log("downloaded!");
-    })
-    .on('error', () => {
-        console.log("url is incorrect");
-    })
 
 var total = 0;
 request(url)
