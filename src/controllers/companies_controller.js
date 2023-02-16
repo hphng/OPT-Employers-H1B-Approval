@@ -13,7 +13,7 @@ function download_data_promise(company_name)
         request(URL)
             .pipe(file)
             .on('finish', () => {
-                console.log("downloaded!");
+                console.log("complete download the data from " + company_name);
             })
             .on('error', () => {
                 console.log("url is incorrect");

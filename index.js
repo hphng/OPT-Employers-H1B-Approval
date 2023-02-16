@@ -2,9 +2,11 @@ const request = require('request');
 const {parse} = require('csv-parse');
 const fs = require('fs');
 
+//const {data} = require('./src/controllers/top_200_employers_sorting_controller')
+
 //const url = "https://www.uscis.gov/tools/reports-and-studies/h-1b-employer-data-hub/export?topic_id=" + company_name + "&state=All&fy=1&naics=All&items_per_page=10";
 
-const {download_data} = require('./src/controllers/companies_controller')
+//const {download_data} = require('./src/controllers/companies_controller')
 
 
 function abc(data)
