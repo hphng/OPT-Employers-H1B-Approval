@@ -1,8 +1,8 @@
 const request = require('request');
 const {parse} = require('csv-parse');
 const fs = require('fs');
-const {download_data} = require('./companies_controller')
-
+//const {download_data} = require('./companies_controller')
+const {total_first_approval} = require('./take_data_companies');
 
 const data = [];
 
@@ -22,14 +22,17 @@ const readable = fs.createReadStream('./data/top_200_employers_OPT_2019/data_Top
     .on("data", (row) => {
         if(row[0].search("University") == -1)
         {
-            let company_name = row[0].toLowerCase();
+            let company_name = row[0];
             
-            if(company_name.search('inc') != -1)
+            if(company_name.search('Inc') != -1)
             {
                 company_name = company_name.slice(0, -5);
             }
-            download_data(company_name);
+            total_first_approval(company_name);   
         }
+        //download_data("Formac");
+
+
     })
     .on("end", () => {
         console.log("finished!");

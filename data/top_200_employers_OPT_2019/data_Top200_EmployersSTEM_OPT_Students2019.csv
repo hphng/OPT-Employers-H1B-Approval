@@ -62,7 +62,8 @@ Capgemini America,175,17,162
 Purdue University,173,94,87
 Kelly Services,172,94,90
 Collabera,169,81,99
-eBay or PayPal,166,47,134
+eBay,166,47,134
+PayPal,100,100,100
 Massachusetts General Hospital,164,32,143
 Adecco,161,73,98
 Indiana University,156,75,87
@@ -143,7 +144,7 @@ Brigham and Womens Hospital,90,27,68
 Disney,90,89,1
 Flexon Technologies,90,39,60
 Itlize Global LLC,90,20,73
-"Mercury Systems, Inc.",89,26,73
+"Mercury Systems, Inc",89,26,73
 Softworld Technologies LLC,88,36,60
 "The Mathworks, Inc",88,17,79
 Clemson University,87,53,34
